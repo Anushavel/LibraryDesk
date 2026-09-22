@@ -1,0 +1,15 @@
+{
+  "books" : [ {
+    "title" : "Java Programming",
+    "author" : "James Gosling",
+    "isbn" : "ISBN001",
+    "copiesAvailable" : 5
+  } ],
+  "students" : [ {
+    "studentId" : "S001",
+    "studentName" : "Anusha"
+  } ],
+  "issueRecords" : [ ],
+  "lateFeePerDay" : 10.0,
+  "loanPeriodDays" : 14
+}

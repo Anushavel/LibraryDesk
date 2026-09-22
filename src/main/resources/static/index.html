@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryDesk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-brand">📚 LibraryDesk</div>
+    <div class="navbar-tabs">
+        <button class="tab-btn active" data-tab="books">Books</button>
+        <button class="tab-btn" data-tab="students">Students</button>
+        <button class="tab-btn" data-tab="issue">Issue Book</button>
+        <button class="tab-btn" data-tab="return">Return Book</button>
+        <button class="tab-btn" data-tab="records">Issue Records</button>
+    </div>
+</nav>
+
+<main class="content">
+
+    <section id="books" class="tab-section active">
+        <div class="section-header">
+            <h2>Books</h2>
+            <button class="btn-primary" id="showAddBookForm">+ Add Book</button>
+        </div>
+
+        <input type="text" id="bookSearchInput" class="search-input" placeholder="Search by title, author, or ISBN...">
+
+        <div id="addBookForm" class="form-card hidden">
+            <h3>Add New Book</h3>
+            <input type="text" id="bookTitle" placeholder="Title">
+            <input type="text" id="bookAuthor" placeholder="Author">
+            <input type="text" id="bookIsbn" placeholder="ISBN">
+            <input type="number" id="bookCopies" placeholder="Copies Available">
+            <div class="form-actions">
+                <button class="btn-primary" id="submitAddBook">Add Book</button>
+                <button class="btn-secondary" id="cancelAddBook">Cancel</button>
+            </div>
+            <p class="form-message" id="addBookMessage"></p>
+        </div>
+
+        <table class="data-table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Copies Available</th>
+            </tr>
+            </thead>
+            <tbody id="booksTableBody"></tbody>
+        </table>
+    </section>
+
+    <section id="students" class="tab-section">
+        <div class="section-header">
+            <h2>Students</h2>
+            <button class="btn-primary" id="showAddStudentForm">+ Add Student</button>
+        </div>
+
+        <input type="text" id="studentSearchInput" class="search-input" placeholder="Search by student ID or name...">
+        <div id="addStudentForm" class="form-card hidden">
+            <h3>Add New Student</h3>
+            <input type="text" id="studentIdInput" placeholder="Student ID">
+            <input type="text" id="studentNameInput" placeholder="Student Name">
+            <div class="form-actions">
+                <button class="btn-primary" id="submitAddStudent">Add Student</button>
+                <button class="btn-secondary" id="cancelAddStudent">Cancel</button>
+            </div>
+            <p class="form-message" id="addStudentMessage"></p>
+        </div>
+
+        <table class="data-table">
+            <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+            </tr>
+            </thead>
+            <tbody id="studentsTableBody"></tbody>
+        </table>
+    </section>
+
+    <section id="issue" class="tab-section">
+        <h2>Issue a Book</h2>
+        <div class="form-card">
+            <input type="text" id="issueIsbn" placeholder="Book ISBN">
+            <input type="text" id="issueStudentId" placeholder="Student ID">
+            <button class="btn-primary" id="submitIssue">Issue Book</button>
+            <p class="form-message" id="issueMessage"></p>
+        </div>
+    </section>
+
+    <section id="return" class="tab-section">
+        <h2>Return a Book</h2>
+        <div class="form-card">
+            <input type="text" id="returnIsbn" placeholder="Book ISBN">
+            <input type="text" id="returnStudentId" placeholder="Student ID">
+            <button class="btn-primary" id="submitReturn">Return Book</button>
+            <p class="form-message" id="returnMessage"></p>
+        </div>
+    </section>
+
+    <section id="records" class="tab-section">
+        <h2>Active Issue Records</h2>
+        <table class="data-table">
+            <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>ISBN</th>
+                <th>Student</th>
+                <th>Issue Date</th>
+                <th>Due Date</th>
+            </tr>
+            </thead>
+            <tbody id="recordsTableBody"></tbody>
+        </table>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

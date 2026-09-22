@@ -1,0 +1,37 @@
+{
+  "books" : [ {
+    "title" : "Java Programming",
+    "author" : "James Gosling",
+    "isbn" : "ISBN001",
+    "copiesAvailable" : 5
+  }, {
+    "title" : "Data Structures in Java",
+    "author" : "Robert Lafore",
+    "isbn" : "ISBN002",
+    "copiesAvailable" : 3
+  }, {
+    "title" : "Clean Code",
+    "author" : "Robert Martin",
+    "isbn" : "ISBN003",
+    "copiesAvailable" : 2
+  } ],
+  "students" : [ {
+    "studentId" : "S001",
+    "studentName" : "Anusha"
+  }, {
+    "studentId" : "S002",
+    "studentName" : "Ravi"
+  }, {
+    "studentId" : "S003",
+    "studentName" : "Kiran"
+  }, {
+    "studentId" : "S004",
+    "studentName" : "Meena"
+  }, {
+    "studentId" : "S005",
+    "studentName" : "Arjun"
+  } ],
+  "issueRecords" : [ ],
+  "lateFeePerDay" : 0.0,
+  "loanPeriodDays" : 14
+}
